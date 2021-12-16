@@ -1,0 +1,47 @@
+﻿<Page x:Class="ServiceSсhcol.Pages.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ServiceSсhcol.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditPage">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Название"></TextBlock>
+                    <TextBox x:Name="TBoxTitle"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Стоимость"></TextBlock>
+                    <TextBox x:Name="TBoxCost"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Время выполнения"></TextBlock>
+                    <TextBox x:Name="TBoxDurationInSecond"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Описание"></TextBlock>
+                    <TextBox x:Name="TBoxDescription"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Скидка"></TextBlock>
+                    <TextBox x:Name="TBoxDiscount"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Border Margin="5" Height="175" Width="200" BorderThickness="1" BorderBrush="{StaticResource ColorAccent}" >
+                        <Image Name="ImageService"></Image>
+                    </Border>
+                    <Button Content="Добавить изображение" Name="BtnSelectedImage" Width="200" Height="35" Click="BtnSelectedImage_Click"></Button>
+                    <Button Content="Сохранить" Name="BtnSave" Width="200" Height="35" Click="BtnSave_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="BtnBack" Content="Назад" Click="BtnBack_Click" HorizontalAlignment="Right" VerticalAlignment="Top"></Button>
+    </Grid>
+</Page>

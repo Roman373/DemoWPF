@@ -1,0 +1,23 @@
+﻿<Window x:Class="ServiceSсhcol.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceSсhcol"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Icon="\Images\school_logo.ico">
+        
+    <Grid Margin="-2,0,2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="/Images/school_logo.png" Width="100" HorizontalAlignment="Left"></Image>
+        <Grid Grid.Row="0" Background="{StaticResource ColorPrimary}"></Grid>
+        <Grid Grid.Row="2" Background="{StaticResource ColorPrimary}"></Grid>
+        <Frame Name="FrameMain" NavigationUIVisibility="Hidden" Grid.RowSpan="3"></Frame>
+        <TextBlock Style="{StaticResource BlockHeader}" Text="{Binding ElementName=FrameMain,Path=Content.Title}"></TextBlock>
+    </Grid>
+</Window>
